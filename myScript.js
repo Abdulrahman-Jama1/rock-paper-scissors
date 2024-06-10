@@ -21,11 +21,13 @@ if (random === 0) {
 function getHumanChoice() {
     //- declare inside it variable called "choice"
     //- assign to it a prompt to ask user for choice between (rock, paper and scissors)
-    let choice = prompt("what do you choose, will it be rock or paper? maybe scissors?");
+    // - make humanChoice parameter case-insensitive so that the player can input "rock", "Rock" etc and it will still work. 
+    let choice = prompt("what do you choose, will it be rock or paper? maybe scissors?").toLowerCase();
 
     // - print the user input in the console
     console.log(choice);
 }
+
 
 
 
