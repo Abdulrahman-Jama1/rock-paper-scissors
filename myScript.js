@@ -16,3 +16,20 @@ if (random === 0) {
 }
 
 
+
+// - create function called getHumanChoice
+function getHumanChoice() {
+    //- declare inside it variable called "choice"
+    //- assign to it a prompt to ask user for choice between (rock, paper and scissors)
+    let choice = prompt("what do you choose, will it be rock or paper? maybe scissors?");
+
+    // - print the user input in the console
+    console.log(choice);
+}
+
+
+
+
+
+
+
