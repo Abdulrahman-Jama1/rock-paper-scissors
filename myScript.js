@@ -27,6 +27,12 @@ let choice = prompt("what do you choose, will it be rock or paper? maybe scissor
     return choice;
 }
 
+
+// - create a new function named playGame
+// - move the playRound function and score variables so that they're declared inside of the new playGame function
+
+function playGame () {
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -55,12 +61,21 @@ function playRound(humanChoice, computerChoice) {
         console.log("who lost? you of course hahahha");
         computerScore++;
     }
+
+};
+// - play 5 times by calling playRound 5 times
+playRound(getHumanChoice(), getComputerChoice());
+playRound(getHumanChoice(), getComputerChoice());
+playRound(getHumanChoice(), getComputerChoice());
+playRound(getHumanChoice(), getComputerChoice());
+playRound(getHumanChoice(), getComputerChoice());
+console.log(`And the score is: you: ${humanScore}, computer: ${computerScore}`);
+
+
 }
 
 
-playRound(getHumanChoice(), getComputerChoice());
-
-
+playGame();
 
 
 
