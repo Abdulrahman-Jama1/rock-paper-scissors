@@ -16,9 +16,6 @@ let choice = prompt("what do you choose, will it be rock or paper? maybe scissor
     return choice;
 }
 
-
-function playGame () {
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -41,17 +38,24 @@ function playRound(humanChoice, computerChoice) {
 
 };
 
-for (let i = 0; i < 5; i++) {
-    playRound(getHumanChoice(), getComputerChoice());
-}
-// - play 5 times by calling playRound 5 times
-console.log(`And the score is: you: ${humanScore}, computer: ${computerScore}`);
+const btnContainer = document.querySelector('#container');
 
+btnContainer.addEventListener('click', (event) => {
+    let target = event.target;
 
-}
+    switch(target.id) {
+        case '1':
+            playRound('rock', getComputerChoice());
+            break;
+        case '2':
+            playRound('paper', getComputerChoice());
+            break;
+        case '3':
+            playRound('scissors', getComputerChoice());
+            break;
 
-
-playGame();
+    }
+})
 
 
 
