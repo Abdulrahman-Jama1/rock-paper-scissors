@@ -43,27 +43,37 @@ const btnContainer = document.querySelector('#container');
 btnContainer.addEventListener('click', (event) => {
     let target = event.target;
 
-    switch(target.id) {
-        case '1':
-            playRound('rock', getComputerChoice());
-            break;
-        case '2':
-            playRound('paper', getComputerChoice());
-            break;
-        case '3':
-            playRound('scissors', getComputerChoice());
-            break;
+          switch(target.id) {
+             case '1':
+                  playRound('rock', getComputerChoice());
+                  pushScore();
+                  break;
+             case '2':
+                  playRound('paper', getComputerChoice());
+                  pushScore();
+                  break;
+             case '3':
+                  playRound('scissors', getComputerChoice());
+                  pushScore();
+                  break;
 
     }
+   
 })
 
 
 
+const results = document.querySelector('.results');
 
-
-
-
-
+ function pushScore() {
+    if(humanScore === 5) {
+        results.textContent = 'You Won!!'
+    } else if(computerScore === 5) {
+        results.textContent = 'You Lost!, Good luck next time!'
+    } else {
+        results.textContent = `Your score: ${humanScore}, Computer score: ${computerScore}`;
+    }
+  }
 
 
 
